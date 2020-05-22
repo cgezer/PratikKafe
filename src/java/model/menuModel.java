@@ -9,6 +9,6 @@ package model;
  *
  * @author SMSNG
  */
-public class mezemModel {
+public class menuModel {
     
 }

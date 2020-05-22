@@ -3,27 +3,28 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package controller;
 
 import entity.etkinlik;
-import java.sql.Date;
+
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
+import model.DBConnection;
 
 /**
  *
  * @author SMSNG
  */
-public class etkinlikModel {
+public class etkinlikController {
      private DBConnection db;
     
     public void insert(etkinlik et){
        try{
            Statement st= this.getDb ().connec ().createStatement ();
-           st.executeUpdate ("insert into etkinlik (id,ad,fiyat,kapasite)  "
-                   + "values ("+et.getId ()+",'"+et.getAd ()+"','"+et.getFiyat ()+"','"+et.getKapasite ()+"')");
+           st.executeUpdate ("insert into etkinlik (ad,fiyat,kapasite)  "
+                   + "values ('"+et.getAd ()+"','"+et.getFiyat ()+"','"+et.getKapasite ()+"')");
        }catch(Exception e){
            System.out.println (e.getMessage ());
        }
@@ -37,7 +38,7 @@ public class etkinlikModel {
            Statement st= this.getDb ().connec ().createStatement ();
           ResultSet rs=st.executeQuery ("select * from etkinlik ");
           while(rs.next ()){
-              etkinlik tmp=new etkinlik (rs.getInt("id"), rs.getString ("ad"),rs.getFloat ("fiyat"),rs.getInt ("kapasite"));
+              etkinlik tmp=new etkinlik (rs.getInt("id"), rs.getString ("ad"),rs.getInt ("fiyat"),rs.getInt ("kapasite"));
               etList.add (tmp);
           }
        }catch(Exception e){

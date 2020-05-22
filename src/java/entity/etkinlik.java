@@ -12,10 +12,16 @@ package entity;
 public class etkinlik {
     private int id;
     private String ad;
-    private float fiyat;
+    private int fiyat;
     private int kapasite;
 
     public etkinlik () {
+    }
+
+    public etkinlik (String ad , int fiyat , int kapasite) {
+        this.ad = ad;
+        this.fiyat = fiyat;
+        this.kapasite = kapasite;
     }
 
 
@@ -39,7 +45,7 @@ public class etkinlik {
         return fiyat;
     }
 
-    public void setFiyat (float fiyat) {
+    public void setFiyat (int fiyat) {
         this.fiyat = fiyat;
     }
 
@@ -51,7 +57,7 @@ public class etkinlik {
         this.kapasite = kapasite;
     }
 
-    public etkinlik (int id , String ad , float fiyat , int kapasite) {
+    public etkinlik (int id , String ad , int fiyat , int kapasite) {
         this.id = id;
         this.ad = ad;
         this.fiyat = fiyat;

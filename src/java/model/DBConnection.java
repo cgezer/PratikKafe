@@ -18,9 +18,9 @@ public class DBConnection {
     
     public Connection connec(){
         try{
-       Class.forName("com.mysql.jdbc.Driver");
+       Class.forName("com.mysql.cj.jdbc.Driver");
         connection=DriverManager.getConnection(
-                "jdbc:mysql://localhost/sakila","root", "123");
+                "jdbc:mysql://localhost:3306/kafedb","root", "123");
       
     }  catch(Exception e){
             System.out.println("Failed to get connection");

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>             
+        <title>Pratik Kafeye Hoş Geldiniz...</title>
+    </h:head>
+  
+    <h:body>          
+          <img src="WEB-INF/maske.jpg" width="642" height="355" alt="maske"/>
+          <h1> ETKİNLİKLER</h1>
+          
+            <h:form>
+            Etkilk ID:<h:inputText value="#{etkinlikController.id}"/><br></br>
+                Etkilk Adı:<h:inputText value="#{etkinlikController.ad}"/><br></br>
+                    Etkilk fiyat:<h:inputText value="#{etkinlikController.fiyat}"/><br></br>
+                        Etkilk kapasite:<h:inputText value="#{etkinlikController.kapasite}"/><br></br>
+                            <h:commandButton action="#{etkinlikController.creat()}" value="Kaydet"/><br></br>
+                            </h:form>
+          
+        <hr/>
+        <h:dataTable value="#{etkinlikController.list}" var="c">
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                    #{c.id}
+            </h:column>
+            <h:column>
+                <f:facet name="header">ADI</f:facet>
+                    #{c.ad}               
+            </h:column>
+            <h:column>
+                <f:facet name="header">FIYAT</f:facet>
+                    #{c.fiyat}               
+            </h:column>
+            <h:column>
+                <f:facet name="header">KAPASITE</f:facet>
+                    #{c.kapasite}               
+            </h:column>
+
+        </h:dataTable>
+    </h:body>
+</html>
+

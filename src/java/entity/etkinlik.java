@@ -18,15 +18,12 @@ public class etkinlik {
     public etkinlik () {
     }
 
-<<<<<<< HEAD
     public etkinlik (int id , String ad , int fiyat , int kapasite) {
         this.id = id;
         this.ad = ad;
         this.fiyat = fiyat;
         this.kapasite = kapasite;
     }
-
-
 
     public int getId () {
         return id;
@@ -44,7 +41,7 @@ public class etkinlik {
         this.ad = ad;
     }
 
-    public float getFiyat () {
+    public int getFiyat () {
         return fiyat;
     }
 
@@ -58,61 +55,6 @@ public class etkinlik {
 
     public void setKapasite (int kapasite) {
         this.kapasite = kapasite;
-    }
-
-   
-=======
-    public etkinlik (String ad , int fiyat , int kapasite) {
-        this.ad = ad;
-        this.fiyat = fiyat;
-        this.kapasite = kapasite;
-    }
-
-
-    public int getId () {
-        return id;
-    }
-
-    public void setId (int id) {
-        this.id = id;
-    }
-
-    public String getAd () {
-        return ad;
-    }
-
-    public void setAd (String ad) {
-        this.ad = ad;
-    }
-
-    public float getFiyat () {
-        return fiyat;
-    }
-
-    public void setFiyat (int fiyat) {
-        this.fiyat = fiyat;
-    }
-
-    public int getKapasite () {
-        return kapasite;
-    }
-
-    public void setKapasite (int kapasite) {
-        this.kapasite = kapasite;
-    }
-
-    public etkinlik (int id , String ad , int fiyat , int kapasite) {
-        this.id = id;
-        this.ad = ad;
-        this.fiyat = fiyat;
-        this.kapasite = kapasite;
-    }
-
->>>>>>> origin/cgezer
-
-    @Override
-    public String toString () {
-        return "etkinlik{" + "id=" + id + ", ad=" + ad + ", fiyat=" + fiyat + ", kapasite=" + kapasite + '}';
-    }
+    }  
     
 }

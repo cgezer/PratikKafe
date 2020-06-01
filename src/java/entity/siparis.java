@@ -13,99 +13,92 @@ import java.sql.Date;
  */
 public class siparis {
     
-    private int id;
-    private String konum;
-    private int tutar;
-    private int iletisim_no;
-    private Date tarih;
-    private String saat;
-    private int sure;
-    private String tipi;
+   private int siparis_id;
+   private String konum;
+   private int tutar;
+   private String saat;
+   private String tarih;
+   private int sure;
+   private String tipi;
+   private int musteri_id;
 
     public siparis () {
     }
 
-    
-    public siparis (int id , String konum , int tutar , int iletisim_no , Date tarih , String saat , int sure , String tipi) {
-        this.id = id;
-        this.konum = konum;
-        this.tutar = tutar;
-        this.iletisim_no = iletisim_no;
-        this.tarih = tarih;
-        this.saat = saat;
-        this.sure = sure;
-        this.tipi = tipi;
-    }
+   public siparis (int siparis_id , String konum , int tutar , String saat , String tarih , int sure , String tipi , int musteri_id) {
+      this.siparis_id = siparis_id;
+      this.konum = konum;
+      this.tutar = tutar;
+      this.saat = saat;
+      this.tarih = tarih;
+      this.sure = sure;
+      this.tipi = tipi;
+      this.musteri_id = musteri_id;
+   }
 
-    public int getId () {
-        return id;
-    }
+   public int getSiparis_id () {
+      return siparis_id;
+   }
 
-    public void setId (int id) {
-        this.id = id;
-    }
+   public void setSiparis_id (int siparis_id) {
+      this.siparis_id = siparis_id;
+   }
 
-    public String getKonum () {
-        return konum;
-    }
+   public String getKonum () {
+      return konum;
+   }
 
-    public void setKonum (String konum) {
-        this.konum = konum;
-    }
+   public void setKonum (String konum) {
+      this.konum = konum;
+   }
 
-    public int getTutar () {
-        return tutar;
-    }
+   public int getTutar () {
+      return tutar;
+   }
 
-    public void setTutar (int tutar) {
-        this.tutar = tutar;
-    }
+   public void setTutar (int tutar) {
+      this.tutar = tutar;
+   }
 
-    public int getIletisim_no () {
-        return iletisim_no;
-    }
+   public String getSaat () {
+      return saat;
+   }
 
-    public void setIletisim_no (int iletisim_no) {
-        this.iletisim_no = iletisim_no;
-    }
+   public void setSaat (String saat) {
+      this.saat = saat;
+   }
 
-    public Date getTarih () {
-        return tarih;
-    }
+   public String getTarih () {
+      return tarih;
+   }
 
-    public void setTarih (Date tarih) {
-        this.tarih = tarih;
-    }
+   public void setTarih (String tarih) {
+      this.tarih = tarih;
+   }
 
-    public String getSaat () {
-        return saat;
-    }
+   public int getSure () {
+      return sure;
+   }
 
-    public void setSaat (String saat) {
-        this.saat = saat;
-    }
+   public void setSure (int sure) {
+      this.sure = sure;
+   }
 
-    public int getSure () {
-        return sure;
-    }
+   public String getTipi () {
+      return tipi;
+   }
 
-    public void setSure (int sure) {
-        this.sure = sure;
-    }
+   public void setTipi (String tipi) {
+      this.tipi = tipi;
+   }
 
-    public String getTipi () {
-        return tipi;
-    }
+   public int getMusteri_id () {
+      return musteri_id;
+   }
 
-    public void setTipi (String tipi) {
-        this.tipi = tipi;
-    }
+   public void setMusteri_id (int musteri_id) {
+      this.musteri_id = musteri_id;
+   }
 
-    @Override
-    public String toString () {
-        return "siparis{" + "id=" + id + ", konum=" + konum + ", tutar=" + tutar + ", iletisim_no=" + iletisim_no + ", tarih=" + tarih + ", saat=" + saat + ", sure=" + sure + ", tipi=" + tipi + '}';
-    }
-    
-    
-    
+
 }

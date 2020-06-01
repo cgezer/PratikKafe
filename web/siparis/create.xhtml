@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/template/admin.xhtml">
+   <ui:define name="content">
+      <h:form>      
+         <div class="form-group">
+            <label>Spariş Konum:</label>       
+            <h:inputText styleClass="form-control" value="#{siparisBean.entity.konum}"/> <br/>
+            <label> Spariş Tutar:</label>   
+            <h:inputText styleClass="form-control" value="#{siparisBean.entity.tutar}"/> <br/>
+            <label>Spariş Saat:</label>   
+            <h:inputText styleClass="form-control" value="#{siparisBean.entity.saat}"/> <br/>
+            <label>Spariş Tarih:</label>   
+            <h:inputText styleClass="form-control" value="#{siparisBean.entity.tarih}"/> <br/> 
+            <label>Spariş Süre:</label>   
+            <h:inputText styleClass="form-control" value="#{siparisBean.entity.sure}"/> <br/> 
+            <label>Spariş Tipi:</label>   
+            <h:inputText styleClass="form-control" value="#{siparisBean.entity.tipi}"/> <br/> 
+            <label>Spariş Musteri Id:</label>   
+            <h:inputText styleClass="form-control" value="#{siparisBean.entity.musteri_id}"/> <br/> 
+            <h:commandButton styleClass="btn btn-primary" action="#{siparisBean.create()}" value=" Siparis Create"/>
+         </div>
+      </h:form>
+   </ui:define>
+</ui:composition>
+

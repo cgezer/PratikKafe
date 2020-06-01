@@ -1,29 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
-    <h:head>             
-        <meta charset="utf-8"></meta>
-<title>Pratik Kafeye Hoş Geldiniz</title> 
-      <h:outputStylesheet library="css" name="bootstrap.css"/>
-      <h:outputScript library="js" name="jquery-3.5.1.min.js"/>
-      <h:outputScript library="js" name="bootstrap.js"/>
-      <br/><br/>
-    </h:head>
-
-   
-    <h:body>   
-
-       <div class="btn-group-vertical">
-         <h:outputLabel styleClass="container-xl" value="YÖNETİCİ MENU"/>
-         <h:form>            
-            <h:commandButton styleClass="btn btn-outline-success" action="/etkinlik/list" value="ETKİNLİK"/><br/>
-          
-         </h:form>
-      </div>
-        <br />      
-    </h:body>
-</html>
-
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/template/admin.xhtml">
+   <ui:define name="content">
+      yeni içerik
+   </ui:define>
+</ui:composition>
 

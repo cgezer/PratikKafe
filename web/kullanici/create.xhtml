@@ -6,20 +6,29 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="/template/admin.xhtml">
    <ui:define name="content">
-      <h:form>      
-         <div class="form-group">  
+      <h:form>             
+             <div class="form-group">
             <label> Kullanici Ad:</label>
-           <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.ad}"/><br/>
+            <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.ad}"/><br/>
+         </div>  
+         <div class="form-group">
             <label>Kullanici Soyad:</label>
             <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.soyad}"/><br/>
+         </div>  
+         <div class="form-group">
             <label> Kullanici Adres:</label>
-           <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.adres}"/><br/>
+            <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.adres}"/><br/>
+         </div>  
+         <div class="form-group">
             <label> Kullanici KrediKart No:</label>
-           <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.kredi_kart_no}"/><br/>
+            <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.kredi_kart_no}"/><br/>
+         </div>  
+         <div class="form-group">
             <label>Kullanici Telefon No:</label>
-            <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.telefon_no}"/><br/>                 
-            <h:commandButton styleClass="btn btn-primary" action="#{kullaniciBean.create()}" value="Kullanıcı Create"/><br/>
-         </div>
+            <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.telefon_no}"/><br/>         
+         </div>        
+         <h:commandButton styleClass="btn btn-primary" action="#{kullaniciBean.create()}" value="Kullanıcı Create"/><br/>
+       
       </h:form>
    </ui:define>
 </ui:composition>

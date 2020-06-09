@@ -7,7 +7,7 @@
                 template="/template/admin.xhtml">
    <ui:define name="content">
       <h:form>      
-        <div class="form-group">  
+         <div class="form-group">  
             <label> Kullanici Ad:</label>
            <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.ad}"/><br/>
             <label>Kullanici Soyad:</label>
@@ -21,6 +21,6 @@
             <h:commandButton styleClass="btn btn-primary" action="#{kullaniciBean.update()}" value="Kullanıcı Update"/><br/>
          </div>
       </h:form> 
-  </ui:define>
+   </ui:define>
 </ui:composition>
 

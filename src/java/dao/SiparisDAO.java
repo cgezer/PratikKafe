@@ -19,7 +19,7 @@ import util.DBConnection;
 
 
 public class SiparisDAO extends DBConnection {
-  
+    
    
    public void create(siparis c){
       try{

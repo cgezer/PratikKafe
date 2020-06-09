@@ -100,5 +100,4 @@ public class siparis {
       this.musteri_id = musteri_id;
    }
 
-
 }

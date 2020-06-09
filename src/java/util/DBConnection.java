@@ -7,6 +7,7 @@ package util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 
 /**
@@ -14,10 +15,10 @@ import java.sql.DriverManager;
  * @author SMSNG
  */
 public abstract class DBConnection {
-    private Connection connection;
+    private Connection connection;    
     
-    
-    public Connection connec(){
+    public Connection connec() throws SQLException{
+       if(this.connection==null || this.connection.isClosed()){
         try{
        Class.forName("com.mysql.cj.jdbc.Driver");
         connection=DriverManager.getConnection("jdbc:mysql://localhost:3306/kafedb","root", "123");
@@ -26,6 +27,7 @@ public abstract class DBConnection {
             System.out.println("Failed to get connection");
             e.printStackTrace();
         }
+       }
       return this.connection;
 }
 }

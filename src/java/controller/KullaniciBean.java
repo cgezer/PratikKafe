@@ -22,6 +22,7 @@ public class KullaniciBean implements Serializable {
 
    private KullaniciDAO dao;
    private kullanici entity;
+   
 
    public KullaniciBean () {
    }
@@ -30,6 +31,10 @@ public class KullaniciBean implements Serializable {
       this.getDao ().create (entity);
    this.entity = new kullanici ();
       return "/kullanici/list";
+   }
+    public kullanici getById(int id){
+      return this.getDao ().getById (id);
+      
    }
 
    public List<kullanici> getRead () {

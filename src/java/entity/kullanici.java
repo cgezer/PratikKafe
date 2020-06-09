@@ -16,6 +16,7 @@ public class kullanici {
     private String adres;
     private int kredi_kart_no;
      private int telefon_no;
+    
 
    public kullanici () {
    }
@@ -77,5 +78,5 @@ public class kullanici {
       this.telefon_no = telefon_no;
    }
 
- 
+
 }

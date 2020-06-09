@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="http://xmlns.jcp.org/jsf/core"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                template="/template/admin.xhtml">
+   <ui:define name="content">
+      <h:form>        
+         <h:commandButton styleClass="btn btn-outline-primary" action="/feedback/create" value="Create New Feedback"/> 
+         <hr/>
+         <h:dataTable styleClass="table table-hover table-striped mt-3" value="#{feedbackBean.read}" var="c">
+            <h:column>
+               <f:facet name="header">ID</f:facet>
+                  #{c.feedback_id}
+            </h:column>
+            <h:column>
+               <f:facet name="header">PUAN</f:facet>
+                  #{c.puan}
+            </h:column>
+            <h:column>
+               <f:facet name="header">ACIKLAMA</f:facet>
+                  #{c.aciklama}
+            </h:column> 
+            <h:column>
+               <f:facet name="header">KULLANICI ADI</f:facet>
+                  #{kullaniciBean.getById(c.kullanici_id).ad}
+            </h:column>      
+             <h:column>
+               <f:facet name="header">KULLANICI SOYADI</f:facet>
+                  #{kullaniciBean.getById(c.kullanici_id).soyad}
+            </h:column>      
+            <h:column>
+               <f:facet name="header">ADMINISTRATION</f:facet> 
+                 <div class="btn-group" role="group" aria-label="Basic example">
+                    <h:commandButton styleClass="btn btn-warning" action="#{feedbackBean.updateForm(c)}" value="update"/>
+                    <h:commandButton styleClass="btn btn-danger" action="#{feedbackBean.delete(c)}" value="delete"/>   
+               </div>
+            </h:column>
+         </h:dataTable>               
+      </h:form>       
+   </ui:define>
+</ui:composition>

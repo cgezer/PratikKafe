@@ -7,7 +7,7 @@
                 template="/template/admin.xhtml">
    <ui:define name="content">
       <h:form>      
-         <div class="form-group">  
+        <div class="form-group">  
             <label> Kullanici Ad:</label>
            <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.ad}"/><br/>
             <label>Kullanici Soyad:</label>
@@ -18,9 +18,7 @@
            <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.kredi_kart_no}"/><br/>
             <label>Kullanici Telefon No:</label>
             <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.telefon_no}"/><br/>                 
-            <h:commandButton styleClass="btn btn-primary" action="#{kullaniciBean.update()}" value="Kullanıcı Update"/><br/>
-         </div>
-      </h:form> 
+            <h:commandButton styleClass="btn btn-primary" action="#{kullaniciBean.create()}" value="Kullanıcı Create"/><br/>
+      </h:form>
    </ui:define>
 </ui:composition>
-

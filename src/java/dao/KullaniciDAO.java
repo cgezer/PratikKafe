@@ -18,6 +18,22 @@ import util.DBConnection;
  */
 public class KullaniciDAO extends DBConnection {
   
+    public kullanici getById(int id){
+      kullanici k=null;      
+      try{
+         Statement st= this.connec ().createStatement ();
+         ResultSet rs=st.executeQuery ("select * from kullanici where kullanici_id="+id);
+         rs.next ();
+         
+         k=new kullanici(rs.getInt ("kullanici_id"),rs.getString ("ad") ,rs.getString ("soyad"),  rs.getString ("adres"), rs.getInt ("kredi_kart_no"),rs.getInt ("telefon_no"));
+         
+      }catch(Exception e){
+         System.out.println (e.getMessage ());
+      }
+      return k;
+   }
+  
+   
    
    public void create(kullanici c){
       try{

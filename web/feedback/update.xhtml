@@ -6,17 +6,17 @@
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 template="/template/admin.xhtml">
    <ui:define name="content">
-      <h:form>      
+      <h:form>             
          <div class="form-group">  
-            <label> PUAN</label>
-            <h:inputText styleClass="form-control" value="#{kullaniciBean.entity.puan}"/><br/>
+           <label> PUAN</label>
+            <h:inputText styleClass="form-control" value="#{feedbackBean.entity.puan}"/><br/>
             <label>ACIKLAMA</label>
             <h:inputText styleClass="form-control" value="#{feedbackBean.entity.aciklama}"/><br/>
             <label>KULLANICI ID</label>
-            <h:inputText styleClass="form-control" value="#{feedbackBean.entity.kullanici_id}"/><br/>
-           
-            <h:commandButton styleClass="btn btn-primary" action="#{feedbackBean.create()}" value="Kullanici Create"/><br/>
+            <h:inputText styleClass="form-control" value="#{feedbackBean.entity.kullanici_id}"/><br/>           
+            <h:commandButton styleClass="btn btn-primary" action="#{feedbackBean.update()}" value="Feedback Update"/><br/>
          </div>
       </h:form>
    </ui:define>
 </ui:composition>
+

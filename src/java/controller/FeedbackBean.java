@@ -5,8 +5,8 @@
  */
 package controller;
 
-import dao.KullaniciDAO;
-import entity.kullanici;
+import dao.FeedbackDAO;
+import entity.feedback;
 import java.io.Serializable;
 import java.util.List;
 import javax.enterprise.context.SessionScoped;
@@ -18,64 +18,61 @@ import javax.inject.Named;
  */
 @Named
 @SessionScoped
-public class KullaniciBean implements Serializable {
+public class FeedbackBean implements Serializable {
 
-   private KullaniciDAO dao;
-   private kullanici entity;
+   private FeedbackDAO dao;
+   private feedback entity;
 
-   public KullaniciBean () {
+   public FeedbackBean () {
    }
 
    public String create () {
       this.getDao ().create (entity);
-   this.entity = new kullanici ();
-      return "/kullanici/list";
-   }
-    public kullanici getById(int id){
-      return this.getDao ().getById (id);
-      
-   }
+    this.entity = new feedback ();
+      return "/feedback/list";
+   }  
+  
 
-   public List<kullanici> getRead () {
+   public List<feedback> getRead () {
       return this.getDao().read ();
    }
 
-   public String updateForm (kullanici c) {
+   public String updateForm (feedback c) {
       this.entity = c;
-      return "/kullanici/update";
+      return "/feedback/update";
    }
 
    public String update () {
       this.getDao ().upDate (entity);
-   this.entity = new kullanici ();
-      return "/kullanici/list";
+     this.entity = new feedback ();
+      return "/feedback/list";
 
    }
 
-   public void delete (kullanici c) {
+   public void delete (feedback c) {
       this.getDao ().delete (c);
 
    }
 
-   public KullaniciDAO getDao () {
+   public FeedbackDAO getDao () {
       if (this.dao == null) {
-         this.dao = new KullaniciDAO ();
+         this.dao = new FeedbackDAO ();
       }
       return dao;
    }
 
-   public void setDao (KullaniciDAO dao) {
+   public void setDao (FeedbackDAO dao) {
       this.dao = dao;
    }
 
-   public kullanici getEntity () {
+   public feedback getEntity () {
       if (this.entity == null) {
-         this.entity = new kullanici ();
+         this.entity = new feedback ();
       }
       return entity;
    }
 
-   public void setEntity (kullanici entity) {
+   public void setEntity (feedback entity) {
       this.entity = entity;
    }
 

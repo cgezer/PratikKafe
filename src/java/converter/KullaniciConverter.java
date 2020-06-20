@@ -34,13 +34,13 @@ public class KullaniciConverter implements Converter {
  
    @Override
    public Object getAsObject (FacesContext context , UIComponent component , String value) {
-      System.out.println ("-----------getAsObject Metod-----------");
+    
       return this.getKulDAO ().getById (Integer.valueOf (value));
    }
 
    @Override
    public String getAsString (FacesContext fc , UIComponent uic , Object t) {
-       System.out.println ("-----------getAsString Metod-----------");
+  
       kullanici  k = (kullanici)t;
      
       return String.valueOf (k.getKullanici_id ());

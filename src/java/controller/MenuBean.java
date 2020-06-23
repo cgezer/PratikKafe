@@ -26,31 +26,35 @@ public class MenuBean implements Serializable {
    public MenuBean () {
    }
 
-   public String create () {
-      this.getDao ().create (entity);
-    this.entity = new menu ();
-      return "/menu/list";
+   public void create () {
+      this.getDao ().create (this.entity);
+      this.entity = new menu ();
    }
 
    public List<menu> getRead () {
-      return this.getDao().read ();
+      return this.getDao ().read ();
    }
 
-   public String updateForm (menu c) {
+   public void clearForm () {
+      this.entity = new menu ();
+   }
+
+   public void updateForm (menu c) {
       this.entity = c;
-      return "/menu/update";
    }
 
-   public String update () {
-      this.getDao ().upDate (entity);
-     this.entity = new menu ();
-      return "/menu/list";
-
+   public void update () {
+      this.getDao ().upDate (this.entity);
+      this.entity = new menu ();
    }
 
-   public void delete (menu c) {
-      this.getDao ().delete (c);
+   public void deleteConfirm (menu c) {
+      this.entity = c;
+   }
 
+   public void delete () {
+      this.getDao ().delete (this.entity);
+      this.entity = new menu ();
    }
 
    public MenuDAO getDao () {
